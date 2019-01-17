@@ -1,0 +1,80 @@
+{% extends "MainBundle:Default:layout.html.twig" %}
+
+{% block main %}
+
+
+
+<div class="ranking-section formulaire">
+	<canvas id="draw" height="200" width="200"></canvas>
+	<p class="rankingtext">API meter</p>
+</div>
+<section class="movie-informations">
+</section>
+
+<section class="login-features">
+	<!-- Article du blog -->
+<section class="post">
+
+
+
+<?php if (array_key_exists('user', $_SESSION) == true) { ?>
+<!-- Formulaire de saisie d'un nouveau commentaire pour cet article -->
+<form class="generic-form" action="" method="POST">
+
+    <!-- Utilisation d'un champ caché pour spécifier à quel article rattacher le commentaire -->
+<!--     <input type="hidden" name="postId" value="<?= $articledetail ?>"> -->
+
+    <fieldset class="comments-field">
+        <legend><i class="fa fa-comment-o"></i> New comment</legend>
+        <ul>
+            <li>
+                <label class="textarea" for="contents">Comments :</label>
+                <hr>
+                <textarea id="contents" name="contents" rows="5"></textarea>
+            </li>
+            <li>
+                <button class="button button-primary add-comment" type="submit">Add</button>
+                <a class="button button-cancel" href="">Cancel</a>
+            </li>
+        </ul>
+    </fieldset>
+</form>   
+
+<!-- Liste des commentaires de l'article du blog -->
+<ul class="comment-list">
+
+    <?php foreach ($comments as $comment) { ?>
+            <li class="comment">
+            <h4><i class="fa fa-comment"></i> Written by : <?= $comment['UserFirstName'] ?></h4>
+            <article><?= $comment['Content'] ?></article>
+        </li>
+    <?php } ?>
+    </ul>
+
+<hr>
+
+<?php } ?>
+
+</main>
+
+</section>
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+{% javascripts 'bundles/main/js/movie.js' %}
+  <script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% javascripts 'bundles/main/js/canvas.js' %}
+  <script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+
+
+
+</html>
+
+{% endblock %}

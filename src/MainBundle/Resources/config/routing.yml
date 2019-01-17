@@ -1,0 +1,9 @@
+main_homepage:
+    path:     /
+    defaults: { _controller: MainBundle:Default:index }
+
+main_movies:
+    path:     /movies/{id}
+    defaults: { _controller: MainBundle:Default:movies }
+    # requirements:
+    # id: \d+

@@ -1,0 +1,467 @@
+*{
+  box-sizing: border-box;
+  word-wrap: break-word;
+  }
+
+img{
+  max-width: 100%;
+
+  height: auto;
+  border: 2px solid black;
+}
+
+body{
+  margin: 0;
+  background-color: #eee;
+  line-height: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p,{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+font-family: 'Source Sans Pro', sans-serif;
+  color: beige;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+	color: black;
+	transition :300ms;
+}
+
+.main-logo{
+	width: 18%;
+	border: 0;
+
+}
+
+.titles{
+	width: 100%;
+
+}
+
+.logout-section{
+	float: right;
+}
+
+.navbar{
+	background-color: #006480;
+	background-size:115px;
+	background-position: left;
+	background-repeat: no-repeat;
+	color: beige;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-bottom: 2px solid black;
+}
+
+.main-title{
+	font-family: 'Kumar one outline', sans-serif;
+	text-align:center;
+}
+
+.main-logo{
+
+}
+
+.login-section{
+	display: flex;
+	flex-direction: row; 
+	font-size:10px;
+}
+
+.login-section a{
+	padding: 0 15px;
+
+}
+
+
+.formulaire{
+	padding: 15px;
+	border-bottom: 2px solid black;
+	margin-bottom: 20px;
+	background-color: rgba(8,33,67,1);
+	display: flex;
+	flex-direction: row;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+.rech{
+	border-radius: 2px;
+
+}
+
+.details{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 400px;
+	background-color: rgba(60,207,603,0);
+	padding : 20px;
+	margin: 40px 0;
+}
+
+.research-section{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-image: url('../images/2001.jpeg');
+	background-size: cover;
+}
+
+
+.response{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container{
+	text-align: center;
+}
+
+.movie-list{
+	padding: 15px 0;
+	width: 100%;
+
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hide{
+	width: 0;
+}
+
+.trending-section{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.trending-section article{
+	width: 20%;
+	text-align: center;
+}
+
+.button-primary{
+	padding-top:2px;
+	padding-bottom: 2px;
+}
+
+.rech{
+	margin-right: 15px;
+	border: 1px solid black
+}
+
+
+.movietrending{
+	margin-top: 8px;
+	color: white;
+	font-size: 15px;
+	border-radius: 5px;
+	background-color: rgba(8,33,67,1);
+}
+
+.trending-title{
+	width: 100%;
+	color: beige;
+	padding-left: 15px;
+
+}
+
+#draw{
+	width:135px;
+}
+
+
+.movie-information{
+	margin-left: 15px;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 5px;
+;
+}
+
+
+.logout{
+	font-size: 12px;
+}
+
+.trending-section ul li p{
+	background-color: rgba(255,255,255,0.7);
+	width: 250px;
+	border-radius: 5px;
+	border: 2px solid black;
+		padding: 4px 15px
+}
+
+.trending-posters{
+	width: 100%;
+}
+
+/**************PAAAAAGE MOOOOOOOVIE SPECIFIC ****************/
+
+.ranking-section{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 90px;
+}
+
+.ranking-section p{
+	display: inline;
+	font-size: 50;
+	color:beige;
+
+}
+
+.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	max-width: 1100px;
+
+}
+
+.movie-description{
+	text-align: left;
+	padding : 15px;
+}
+
+.movie-title{
+	color: black;
+}
+
+.login-features{
+
+background-color: rgba(8,33,67,1);
+color: white;
+padding : 15px;
+min-height: 80vh;
+
+}
+
+.favourite{
+	display: block;
+}
+
+
+.fa-star{
+	font-size: 45px;
+	margin-bottom: 8px;
+}
+
+.favourite:click
+
+.container p{
+	vertical-align: bottom;
+}
+
+.bzz{
+	border-radius: 3px;
+    font-size: 12px;
+    color: white;
+    background-color: #f1cf6c;
+    border: 1px solid #c7990e;
+    box-shadow: 2px 2px 2px black;
+}
+
+.bzz:hover{
+	background-color: #826308;
+	transition: 300ms; 
+}
+
+.fa-star{
+	color:#48226d;
+}
+
+.add-comment{
+	border-radius:5px; 
+	font-size: 12px;
+
+}
+
+
+.add-comment:hover{
+	background-color: #333; 
+}
+
+#contents{
+	border-radius: 4px;
+	display: inline-block;
+	width: 300px;
+	height: 200px;
+	margin-bottom : 20px;
+}
+
+hr{
+	margin-bottom: 0;
+}
+#pet-select{
+	margin: 0 15px;
+}
+
+.comments-field{ 
+	border: 2px solid white;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+/******************** LOGIN PAGE ********************/
+
+
+#login-form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin : 15px;
+	padding : 10px;
+	border: 1px dashed black;
+	width: 30%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+
+/*************** REGISTER ****************************/
+
+
+#register-form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin : 0 30px;
+	padding : 10px;
+	border: 1px dashed black;
+	width: 30%;
+	margin-right: auto;
+	margin-left: 66%;
+	background-color: #006480;
+	border-radius: 5px;
+
+}
+
+#register-form input{
+	border-radius: 4px;
+	margin-bottom: 8px;
+	padding-left: 6px;
+}
+
+#register-form label{
+	margin-bottom: 0;
+}
+
+#register-form h4{
+	margin-bottom: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	padding-bottom: 4px;
+}
+
+
+.section-flex{
+	background-image: url('../images/grave.jpg');
+	height: 100vh;
+	padding-top: 30px;
+
+}
+
+.birthdate{
+	display: flex;
+	margin-bottom: 4px;
+}
+
+
+.wrongmail{
+	width: 30%;
+	margin-right: 10%;
+	margin-left: auto;
+	background-color: beige;
+	color: red;
+	font-size: 20px;
+	margin-top: 20px;
+	border-radius: 5px;
+	padding: 8px;
+}
+
+.wrongtext{
+	font-size: 20px;
+	color: red;
+}
+
+/**********VALIDATION ***************/
+
+
+
+.validation-div{
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: beige;
+	border : 2px solid grey;
+	text-align: center;
+
+
+}
+
+.validation-text{
+	color: red;
+}
+
+.love{
+	background-image: url('../images/love.jpg');
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	padding-top:40px;
+}
+
+
+
+/***********************FAVORITES****************/
+
+
+.hide{
+	display: none;
+}
+
+
+.favourite-informations{
+	padding-top: 30px;
+	margin-left: 15px;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 5px;
+}
+
+.one-movie{
+	height: 300px;
+	width: auto;
+}

@@ -1,0 +1,47 @@
+{% extends "MainBundle:Default:layout.html.twig" %}
+
+{% block  main %}
+<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous">
+</script>
+{% javascripts 'bundles/main/js/api.js' %}
+	<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+	<section class="research-section" style="background-image:url('{{ asset('bundles/main/images/2001.jpeg') }}')">
+		<article class="movie-list">
+			<form name="formulaire" class="formulaire">
+				<input type="message" name="researchbar" placeholder="Search movies..." class="input-group-text rech">
+				<input type="submit" name="executer" class="btn btn-dark entrer" placeholder="RECHERCHER" value='ok'>
+
+			<select id="pet-select">
+			    <option value="28">Action</option>
+			    <option value="12">Adventure</option>
+			    <option value="16">Animation</option>
+			    <option value="35">Comedy</option>
+			    <option value="99">Documentary</option>
+			    <option value="14">Fantasy</option>
+			    <option value="27">Horror</option>
+			    <option value="9648">Mystery</option>
+			    <option value="878">Science Fiction</option>
+			    <option value="53">Thriller</option>
+			    <option value="37">Western</option>
+			</select>
+			</form>
+			<div class="results-section">
+			</div>
+		</article>
+		<article class="movie-information hide">
+		</article>
+	</section>
+</section>
+
+</body>
+
+
+
+  <script type="text/javascript" src="ressources/js/api.js"></script>
+</html>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Movie</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand|Source+Sans|Kumar+One+Outline" rel="stylesheet">
+{% stylesheets 'bundles/main/css/main.css' %}
+  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+{% endstylesheets %}
+	<link rel="icon" type="image/png" href="images/feather.png">
+</head>
+<body>
+<section class="navbar">
+	
+	<img src="{{ asset('bundles/main/images/cameralogo.png') }}" class="main-logo">
+	<div class="titles">
+		<a href="{{ path('main_homepage')}}"><h1 class="main-title">Projet film API</h1></a>
+		<?php if (array_key_exists('user', $_SESSION) == false) { ?>
+		
+		<article class="login-section">
+			<a href="login.php"><i class="fas fa-plug"></i></i> Connection</a>
+			<a href="register.php"><i class="far fa-registered"></i> New member ?</a>
+		</article>
+
+		<?php } else { ?>
+
+		<article class="logout-section">
+		<a href="favorite.php"><h2 class="logout"><i class="fas fa-thumbs-up"></i></i> Favorite</h2></a>
+		<a href="logout.php"><h2 class="logout"><i class="fab fa-connectdevelop"></i> logout</h2></a>
+		</article>
+
+		<?php } ?>
+
+	</div>
+</section>
+
+{% block main %}
+
+{% endblock %}
