@@ -7,3 +7,10 @@ main_movies:
     defaults: { _controller: MainBundle:Default:movies }
     # requirements:
     # id: \d+
+
+
+main_register:
+    path:     /register
+    defaults: { _controller: MainBundle:Default:register }
+    # requirements:
+    # id: \d+

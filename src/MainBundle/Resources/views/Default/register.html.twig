@@ -1,0 +1,75 @@
+{% extends "MainBundle:Default:layout.html.twig" %}
+
+
+{% block main %}
+<section class="section-flex" style="background-image:url('{{ asset('bundles/main/images/grave.jpg') }}')">
+{# <form id="register-form" action="register.php" method="POST">
+  <h4>Create your account here : </h4>
+	<h4><label>Lastname</label></h4>
+    <input type="text" name="LastName" placeholder="Jeanne" class="register-input-firstname" minlength="5" required/>
+    <h4><label>Firstname</label></h4>
+    <input type="text" name="FirstName" placeholder="Moreau" class="register-input-lastname"/>
+    <h4><label>Password</label></h4>
+    <input type="password" name="Password" placeholder="••••••••" class="register-input-password" minlength="8" required/>
+    <h4 for="birthDay">Birthdate :</h4>
+      <div class="birthdate">
+        <select id="birthDay" name="birthDay">
+        <?php for ($i=1; $i<32  ; $i++) { 
+          ?>
+                    <option value="<?= $i ?>"><?= $i ?></option>
+                 <?php } ?>
+        </select>
+        <span> / </span>
+        <select name="birthMonth">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+        </select>
+        <span> / </span>
+        <select name="birthYear">
+        <?php for ($i=1940; $i<2020  ; $i++) { 
+          ?>
+          <option value="<?= $i ?>"><?= $i ?></option>
+          <?php } ?>
+        </select>
+      </div>
+    <h4><label>Email</label></h4>
+    <input type="text" name="Email" placeholder="J-morreau@zip.com" class="register-input-email"/>
+
+	<input type="submit" value="submit" class="submit-user"/>
+
+</form> #}
+
+{{form(form)}}
+
+{# <?php if ($samemail==true){ ?>
+
+<div class="wrongmail">
+  <h2 class="wrongtext"> Cette adresse mail est déjà utilisée </h2>
+</div>
+
+<?php 
+}
+?> #}
+
+</section>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/api.js"></script>
+  <script type="text/javascript" src="js/register.js"></script>
+
+</html>
+
+{% endblock %}
