@@ -1,0 +1,32 @@
+{% extends 'MainBundle:Default:layout.html.twig' %}
+
+{% block main %}
+{# <?php if (array_key_exists('user', $_SESSION) == false) {?>
+
+<form id="login-form" action="login.php" method="POST">
+	<label>Email</label>
+	<input type="text" name="email" />
+    
+    <label>Password</label>
+	<input type="password" name="password" />
+
+	<input type="submit" value="Submit" />
+</form>
+
+<?php
+
+} 
+
+else {
+
+  	header('Location: index.php');
+	exit;
+
+}
+
+?> #}
+<div id="login-form">
+	{{ form(form) }}
+</div>
+
+{% endblock %}

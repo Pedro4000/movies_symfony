@@ -12,5 +12,18 @@ main_movies:
 main_register:
     path:     /register
     defaults: { _controller: MainBundle:Default:register }
-    # requirements:
-    # id: \d+
+
+
+main_login:
+    path:     /login
+    defaults: { _controller: MainBundle:Default:login }
+
+main_logout:
+    path:     /logout
+    defaults: { _controller: MainBundle:Default:logout }
+
+
+main_favourite:
+    path:     /favourite
+    defaults: { _controller: MainBundle:Default:favourite }
+
