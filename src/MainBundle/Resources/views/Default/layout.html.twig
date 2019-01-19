@@ -18,21 +18,21 @@
 		<img src="{{ asset('bundles/main/images/cameralogo.png') }}" class="main-logo">
 		<div class="titles">
 			<a href="{{ path('main_homepage')}}"><h1 class="main-title">Projet film API</h1></a>
-			<?php if (array_key_exists('user', $_SESSION) == false) { ?>
+{# 			<?php if (array_key_exists('user', $_SESSION) == false) { ?> #}
 			
 			<article class="login-section">
 				<a href="{{ path ('main_login') }}"><i class="fas fa-plug"></i></i> Connection</a>
 				<a href="{{ path ('main_register') }}"><i class="far fa-registered"></i> New member ?</a>
 			</article>
 
-			<?php } else { ?>
+{# 			<?php } else { ?> #}
 
 			<article class="logout-section">
 			<a href="{{ path ('main_favourite') }}"><h2 class="logout"><i class="fas fa-thumbs-up"></i></i> Favorite</h2></a>
 			<a href="{{ path ('main_logout') }}"><h2 class="logout"><i class="fab fa-connectdevelop"></i> logout</h2></a>
 			</article>
 
-			<?php } ?>
+{# 			<?php } ?> #}
 
 		</div>
 	</section>

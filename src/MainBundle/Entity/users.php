@@ -38,7 +38,7 @@ class users
     /**
      * @var int
      *
-     * @ORM\Column(name="password", type="integer")
+     * @ORM\Column(name="password", type="string", length=255)
      */
     private $password;
 

@@ -10,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Session;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 use MainBundle\Entity\users;
 use MainBundle\Entity\favourite;
@@ -97,22 +97,43 @@ class DefaultController extends Controller
                 $usermail=$user->getEmail();
                 $userpassword=$user->getPassword();
 
-                var_dump($usermail,$userpassword);
                 $em = $this->getDoctrine()
                   ->getManager();
                 $repo=$em->getRepository('MainBundle:users');
 
-                $user=$repo->findOneBy(array('email'=>$usermail));
+                $userbase=$repo->findOneBy(array('email'=>$usermail));
 
-                var_dump($user);
+                if (isset($userbase))
+                 { 
+
+                    $modepa=$userbase->getPassword();
+                    var_dump($modepa,$userpassword);
+                    if ($modepa===$userpassword) {
+                        var_dump('le code est bon');
+
+                        var_dump($userbase);
+
+                        $session = new Session();
+                        $session->invalidate();
+                        $session->start();
+
+                        $session->set('id',$userbase->getId());
+                        $session->set('firstName',$userbase->getFirstName());
+                        $session->set('email',$userbase->getEmail());
+
+                        var_dump($session->get('id'),$session->get('firstName'),$session->get('email'));
+                    }
+
+
+       
+                }
+
 
                 return $this->render('MainBundle:Default:login.html.twig', array(
                     'form'=>$form->createView(),
                     'user'=>$user));
 
-                if (isset($user)) {
-                    var_dump('un utilisateur à été trouvé');
-                }
+
 
             
 
